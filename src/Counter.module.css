@@ -1,19 +1,6 @@
 .wrapper {
-    box-sizing: border-box;
-    flex-direction: column;
-    width: 350px;
-    background-color: rgba(0,0,0,0.3);
-    border-radius: 10px;
-    border: 2px solid #64D8FB;
-}
-
-.counter {
-    border: 1px solid #64D8FB;
-}
-
-.wrapper {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     margin: 100px auto;
     width: 1024px;
 }
@@ -21,17 +8,24 @@
 .counter {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    width: 370px;
-    height: 250px;
+    justify-content: center;
+    width: 400px;
+    height: 300px;
     margin: 50px auto;
     border: 3px solid #64D8FB;
     border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
 }
 
-.buttonBlock {
-
-    border: 1px solid #64D8FB;
+.buttonsBlock {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    width: 340px;
+    height: 60px;
+    border: 2px solid #64D8FB;
+    border-radius: 10px;
 }
 
 .button {
@@ -40,6 +34,10 @@
     height: 35px;
     border-radius: 10px;
     background-color: #64D8FB;
+}
+
+.buttonReset {
+       width: 120px;
 }
 
 .button:hover {
@@ -51,4 +49,13 @@
     box-shadow: none;
     background-color: black;
     color: #64D8FB;
+    border: 1px solid #64D8FB;
+}
+
+@media screen and (min-width: 375px) and (max-width: 660px) {
+    .wrapper {
+        flex-direction: column;
+        width: 100%;
+        margin: auto;
+    }
 }

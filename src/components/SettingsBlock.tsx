@@ -1,6 +1,5 @@
 import React, {ChangeEvent, useState} from 'react';
 import s from './SettingsBlock.module.css';
-import {TextType} from '../Counter';
 
 type PropsType = {
     startValue: number
@@ -9,7 +8,6 @@ type PropsType = {
     setDisabled: (disabled: boolean) => void
     setDisabledInc: (disabledInc: boolean) => void
     setDisabledReset: (disabledReset: boolean) => void
-    setText: (text: TextType) => void
     setStartValue: (startValue: number) => void
     setMaxValue: (maxValue: number) => void
 }
@@ -19,7 +17,6 @@ export const SettingsBlock: React.FC<PropsType> = ({
                                                        maxValue,
                                                        setDisabled,
                                                        setDisabledReset,
-                                                       setText,
                                                        setStartValue,
                                                        setMaxValue
                                                    }) => {
@@ -35,13 +32,11 @@ export const SettingsBlock: React.FC<PropsType> = ({
 
             setStartValueError(true)
             setMaxValueError(true)
-            setText('Incorrect value!')
             setDisabled(true)
         } else if (+e.currentTarget.value >= 0 && startValue >= 0) {
 
             setStartValueError(false)
             setMaxValueError(false)
-            setText(`enter values and press 'set'`)
             setDisabled(false)
         } else if (startValue < 0) {
 
@@ -57,13 +52,11 @@ export const SettingsBlock: React.FC<PropsType> = ({
         const isIncorrectValue = +e.currentTarget.value === maxValue || maxValue < 0 || +e.currentTarget.value > maxValue
         if (isIncorrectValue) {
             setStartValueError(true)
-            setMaxValueError(true)  ///!
-            setText('Incorrect value!')
+            setMaxValueError(true)
             setDisabled(true)
         } else if (+e.currentTarget.value >= 0 && maxValue >= 0) {
             setStartValueError(false)
-            setMaxValueError(false) ////!
-            setText(`enter values and press 'set'`)
+            setMaxValueError(false)
             setDisabled(false)
         } else if (+e.currentTarget.value < 0) {
             setStartValueError(true)
