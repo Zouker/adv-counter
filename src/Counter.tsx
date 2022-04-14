@@ -22,6 +22,7 @@ export const Counter = () => {
         if (valueStartValueAsString) {
             let newValue = JSON.parse(valueStartValueAsString)
             setStartValue(newValue)
+            setCount(newValue)
         }
         let valueMaxValueAsString = localStorage.getItem('maxValue')
         if (valueMaxValueAsString) {
@@ -32,7 +33,7 @@ export const Counter = () => {
     useEffect(() => {
         localStorage.setItem('startValue', JSON.stringify(startValue))
         localStorage.setItem('maxValue', JSON.stringify(maxValue))
-    })
+    },)
 
     const setHandler = () => {
         localStorage.setItem('startValue', JSON.stringify(startValue))
