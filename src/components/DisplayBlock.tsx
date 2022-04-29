@@ -3,20 +3,14 @@ import s from './DisplayBlock.module.css';
 
 type PropsType = {
     count: number
-    isPreview: boolean
-    startValue: number
     maxValue: number
 }
 
 export const DisplayBlock: React.FC<PropsType> = ({
-
                                                       count,
-                                                      isPreview,
-                                                      startValue,
-                                                      maxValue
+                                                      maxValue,
                                                   }) => {
     const scoreboardClassname = count === maxValue ? `${s.counterBoard} ${s.red}` : `${s.counterBoard}`
-
 
     return (
         <>
