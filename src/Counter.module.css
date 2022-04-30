@@ -12,9 +12,9 @@
     width: 400px;
     height: 300px;
     margin: 50px auto;
-    border: 3px solid #64D8FB;
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.3);
+    border: 3px solid #3aee00;
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.4);
 }
 
 .buttonsBlock {
@@ -24,16 +24,16 @@
     margin: auto;
     width: 340px;
     height: 60px;
-    border: 2px solid #64D8FB;
-    border-radius: 10px;
+    border: 2px solid #3aee00;
+    border-radius: 20px;
 }
 
 .button {
     margin: 10px;
     width: 80px;
     height: 35px;
-    border-radius: 10px;
-    background-color: #64D8FB;
+    border-radius: 12px;
+    background-color: #3aee00;
 }
 
 .buttonLarge {
@@ -41,15 +41,15 @@
 }
 
 .button:hover {
-    box-shadow: 0 0 15px #64D8FB;
+    box-shadow: 0 0 15px #3aee00;
     cursor: pointer;
 }
 
 .button:disabled {
     box-shadow: none;
     background-color: black;
-    color: #64D8FB;
-    border: 1px solid #64D8FB;
+    color: #3aee00;
+    border: 1px solid #3aee00;
 }
 
 @media screen and (min-width: 375px) and (max-width: 660px) {

@@ -5,16 +5,16 @@
     margin: auto;
     width: 340px;
     height: 130px;
-    color: #64D8FB;
+    color: #3aee00;
     font-size: 100px;
-    border: 2px solid #64D8FB;
+    border: 2px solid #3aee00;
     font-weight: bold;
-    border-radius: 1rem;
+    border-radius: 20px;
 }
 
 .text {
     font-size: 22px;
-    color: #64D8FB;
+    color: #3aee00;
 }
 
 .textError {

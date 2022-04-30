@@ -1,27 +1,20 @@
 import React, {ChangeEvent} from 'react';
 import s from './SettingsBlock.module.css';
+import {useDispatch, useSelector} from 'react-redux';
+import {AppStateType} from '../bll/store';
+import {CounterStateType, setMaxValueAC, setStartValueAC} from '../bll/counter-reducer';
 
-type PropsType = {
-    startValue: number
-    maxValue: number
-    setStartValue: (startValue: number) => void
-    setMaxValue: (maxValue: number) => void
-    setIsPreview: (isPreview: boolean) => void
-}
+export const SettingsBlock = () => {
 
-export const SettingsBlock: React.FC<PropsType> = ({
-                                                       startValue,
-                                                       maxValue,
-                                                       setStartValue,
-                                                       setMaxValue,
-                                                   }) => {
+    const {startValue, maxValue} = useSelector<AppStateType, CounterStateType>(state => state.counter)
+    const dispatch = useDispatch()
 
     const onChangeMaxValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setMaxValue(+e.currentTarget.value)
+        dispatch(setMaxValueAC(+e.currentTarget.value))
     }
 
     const onChangeStartValueHandler = (e: ChangeEvent<HTMLInputElement>) => {
-        setStartValue(+e.currentTarget.value)
+        dispatch(setStartValueAC(+e.currentTarget.value))
     }
 
     return (

@@ -6,27 +6,27 @@
     width: 340px;
     height: 130px;
     margin: auto;
-    border: 2px solid #64D8FB;
-    border-radius: 10px;
-    color: #64D8FB;
+    border: 2px solid #3aee00;
+    border-radius: 20px;
+    color: #3aee00;
 }
 
 .defaultInput {
     margin: 10px;
     padding: 5px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     color: black;
     outline: none;
-    border: 2px solid #64D8FB;
+    border: 2px solid #3aee00;
 }
 
 .errorInput {
     margin: 10px;
     padding: 5px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 20px;
     cursor: pointer;
     color: black;
     outline: none;
