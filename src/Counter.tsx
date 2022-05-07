@@ -27,10 +27,7 @@ export const Counter = () => {
         <div className={s.wrapper}>
             <div className={s.counter}>
                 {isPreview
-                    ? <DisplayBlock
-                        count={count}
-                        maxValue={maxValue}
-                    />
+                    ? <DisplayBlock/>
                     : <SettingsBlock/>
                 }
                 {isPreview
